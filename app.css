@@ -10,6 +10,17 @@
 :root {
   --font-family: "Inter", serif;
 
+  --bg-primary: #f4f5fb;
+  --bg-secondary: #fff;
+
+  --content-color-primary: #080b12;
+  --content-color-secondary: #374151;
+  --content-color-tertiary: #9ca3af;
+  --content-color-always-white: #fff;
+
+  --border-color-primary: #d1d5db;
+  --border-color-hover: #b9c2d0;
+
   font-size: 62.5%; /* 10px */
 }
 
@@ -18,4 +29,18 @@ body {
   font-size: 1.6rem;
   font-family: var(--font-family);
   font-optical-sizing: auto;
+  background: var(--bg-primary);
+}
+
+h1 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: var(--content-color-primary);
+}
+
+/* Page */
+#page {
+  width: 100%;
+  max-width: 325px;
+  margin: 6.6rem auto 17rem auto;
 }
