@@ -10,6 +10,11 @@
 :root {
   --font-family: "Inter", serif;
 
+  --color-brand: #ca3884;
+  --color-brand-hover: #a52c6b;
+
+  --color-danger: #c93847;
+
   --bg-primary: #f4f5fb;
   --bg-secondary: #fff;
 
@@ -25,9 +30,17 @@
 }
 
 /* General */
+body,
+input,
+select,
+textarea,
+button,
+::placeholder {
+  font-family: var(--font-family);
+}
+
 body {
   font-size: 1.6rem;
-  font-family: var(--font-family);
   font-optical-sizing: auto;
   background: var(--bg-primary);
 }
@@ -43,4 +56,60 @@ h1 {
   width: 100%;
   max-width: 325px;
   margin: 6.6rem auto 17rem auto;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin: 4.4rem auto 4rem auto;
+}
+
+form input,
+form button,
+::placeholder {
+  font-size: 1.6rem;
+}
+
+form input,
+form button {
+  border-radius: 1.2rem;
+  transition: all ease 0.3s;
+}
+
+form input {
+  display: block;
+  min-height: 44px;
+  color: var(--content-color-primary);
+  background: var(--bg-secondary);
+  border: solid 2px var(--border-color-primary);
+  padding: 1.1rem 1.8rem;
+  outline: none;
+}
+
+form input:hover {
+  border-color: var(--border-color-hover);
+}
+
+form input:focus {
+  border-color: var(--color-brand);
+}
+
+::placeholder {
+  color: var(--content-color-tertiary);
+}
+
+form button {
+  padding: 1rem 2.4rem;
+  height: 4.4rem;
+  background-color: var(--color-brand);
+  border: none;
+  color: var(--content-color-always-white);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--color-brand-hover);
 }
