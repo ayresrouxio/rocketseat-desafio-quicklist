@@ -1,0 +1,21 @@
+/* Reset */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Root */
+:root {
+  --font-family: "Inter", serif;
+
+  font-size: 62.5%; /* 10px */
+}
+
+/* General */
+body {
+  font-size: 1.6rem;
+  font-family: var(--font-family);
+  font-optical-sizing: auto;
+}
