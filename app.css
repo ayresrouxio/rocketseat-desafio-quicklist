@@ -187,7 +187,7 @@ form button:hover {
 
 /* Toasty */
 .toasty {
-  display: flex;
+  display: none;
   align-items: center;
   background-color: var(--color-danger);
   color: var(--content-color-always-white);
