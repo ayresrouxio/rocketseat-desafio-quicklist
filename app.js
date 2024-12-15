@@ -13,6 +13,10 @@ form.addEventListener("submit", (event) => {
   addItem(itemToAdd)
 })
 
+toastyBtnClose.addEventListener("click", () => {
+  hideToasty()
+})
+
 function addItem(item) {
   const newItem = createItemElement(item)
   list.append(newItem)
@@ -51,6 +55,6 @@ function showToasty() {
   toasty.classList.add("show")
 }
 
-toastyBtnClose.addEventListener("click", () => {
+function hideToasty() {
   toasty.classList.remove("show")
-})
+}
