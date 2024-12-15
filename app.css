@@ -72,6 +72,11 @@ form button,
   margin: 6.6rem auto 17rem auto;
 }
 
+/* Header */
+.logo {
+  display: none;
+}
+
 /* Form */
 form {
   display: flex;
@@ -216,4 +221,29 @@ form button:hover {
   font-size: 0;
   line-height: 0;
   cursor: pointer;
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+  #page,
+  .toasty {
+    max-width: 627px;
+  }
+
+  #page {
+    margin-top: 2.5rem;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto 94px auto;
+  }
+
+  form {
+    flex-direction: row;
+  }
+
+  form input {
+    flex: 1;
+  }
 }
