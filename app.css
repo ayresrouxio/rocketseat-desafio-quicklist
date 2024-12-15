@@ -51,6 +51,19 @@ h1 {
   color: var(--content-color-primary);
 }
 
+form input,
+form button,
+.list-items li {
+  border-radius: 1.2rem;
+}
+
+form input,
+form button,
+.list-items li::before,
+.list-items button {
+  transition: all ease 0.3s;
+}
+
 /* Page */
 #page {
   width: 100%;
@@ -70,12 +83,6 @@ form input,
 form button,
 ::placeholder {
   font-size: 1.6rem;
-}
-
-form input,
-form button {
-  border-radius: 1.2rem;
-  transition: all ease 0.3s;
 }
 
 form input {
@@ -112,4 +119,62 @@ form button {
 
 form button:hover {
   background: var(--color-brand-hover);
+}
+
+/* List Items */
+.list-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.list-items li {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+  background: var(--bg-secondary);
+  line-height: 2rem;
+  font-weight: 500;
+  color: var(--content-color-secondary);
+  min-height: 5.7rem;
+}
+
+.list-items li::before {
+  content: "";
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 0.6rem;
+  border: solid 1px var(--border-color-primary);
+  margin-right: 1.2rem;
+}
+
+.list-items li.checked::before {
+  background-color: var(--color-brand);
+  border-color: var(--color-brand);
+  background-image: url('data:image/svg+xml,<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7.5L4.75 9.25L10 3.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.list-items button {
+  display: block;
+  width: 3.2rem;
+  height: 3.2rem;
+  border: none;
+  margin-left: auto;
+  background-color: transparent;
+  background-image: url('data:image/svg+xml,<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 4.16666L12.5869 10.8501C12.4813 12.5576 12.4285 13.4114 12.0005 14.0253C11.7889 14.3287 11.5165 14.5849 11.2005 14.7773C10.5614 15.1667 9.706 15.1667 7.99513 15.1667C6.28208 15.1667 5.42553 15.1667 4.78603 14.7766C4.46987 14.5838 4.19733 14.3272 3.98579 14.0232C3.55792 13.4084 3.5063 12.5534 3.40307 10.8435L3 4.16666" stroke="%236B6671" stroke-linecap="round"/><path d="M2 4.16668H14M10.7038 4.16668L10.2487 3.22783C9.9464 2.60418 9.7952 2.29236 9.53447 2.09788C9.47667 2.05474 9.4154 2.01637 9.35133 1.98314C9.0626 1.83334 8.71607 1.83334 8.023 1.83334C7.31253 1.83334 6.95733 1.83334 6.66379 1.98942C6.59873 2.02402 6.53665 2.06394 6.47819 2.10879C6.21443 2.31114 6.06709 2.63438 5.77241 3.28085L5.36861 4.16668" stroke="%236B6671" stroke-linecap="round"/><path d="M6.33325 11.5V7.5" stroke="%236B6671" stroke-linecap="round"/><path d="M9.66675 11.5V7.5" stroke="%236B6671" stroke-linecap="round"/></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  border-radius: 6px;
+}
+
+.list-items button:hover {
+  background-color: var(--border-color-primary);
 }
