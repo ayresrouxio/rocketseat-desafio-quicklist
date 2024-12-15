@@ -203,6 +203,10 @@ form button:hover {
   transform: translateX(-50%);
 }
 
+.toasty.show {
+  display: flex;
+}
+
 .toasty img {
   margin-right: 8px;
 }

@@ -1,6 +1,8 @@
 const form = document.querySelector("form")
 const input = document.querySelector("input")
 const list = document.querySelector(".list-items")
+const toasty = document.querySelector(".toasty")
+const toastyBtnClose = toasty.querySelector("button")
 
 form.addEventListener("submit", (event) => {
   event.preventDefault()
@@ -42,4 +44,13 @@ function toggleCheckItem(elementToCheck) {
 
 function handleRemoveItem(elementToRemove) {
   elementToRemove.remove()
+  showToasty()
 }
+
+function showToasty() {
+  toasty.classList.add("show")
+}
+
+toastyBtnClose.addEventListener("click", () => {
+  toasty.classList.remove("show")
+})
